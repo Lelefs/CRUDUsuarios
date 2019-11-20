@@ -1,0 +1,24 @@
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
+            <input type="text" [(ngModel)]="usuario.nome" pInputText placeholder="Nome">
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
+            <input type="text" [(ngModel)]="usuario.sobrenome" pInputText placeholder="Sobrenome">
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
+            <input type="text" [(ngModel)]="usuario.email" pInputText placeholder="E-mail">
+        </div>
+    </div>
+</div>
+<div class="divBtnsVoltarSalvar">
+    <button pButton label="Voltar" routerLink="/usuario"></button>
+    <button pButton (click)="salvar()" label="Salvar" [disabled]="usuario.nome === '' || usuario.sobrenome === '' || usuario.email === ''"></button>
+</div>

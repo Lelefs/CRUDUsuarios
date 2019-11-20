@@ -1,0 +1,7 @@
+.divBtnsVoltarSalvar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    grid-gap: 15px;
+    margin: 15px 0 0 7px;
+}
