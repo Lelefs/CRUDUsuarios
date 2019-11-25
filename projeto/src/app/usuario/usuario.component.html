@@ -13,6 +13,7 @@
             <td>{{usuario.sobrenome}}</td>
             <td>{{usuario.email}}</td>
             <td>
+                <button pButton label="Editar" routerLink="editar/{{usuario._id}}" style="margin-right: 15px;"></button>
                 <button pButton label="Deletar" class="ui-button-danger" (click)="delete(usuario)"></button>
             </td>
         </tr>

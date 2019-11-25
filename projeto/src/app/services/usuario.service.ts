@@ -15,6 +15,15 @@ export class UsuarioService {
         return this.http.post<Usuario>((environment.host + '/users'), usuario)
     }
 
+    public editar (usuario: Usuario): Observable<Usuario> {
+        console.log(usuario)
+        return this.http.post<Usuario>((environment.host + '/editarUsuario'), usuario)
+    }
+
+    public usuarioPorId (usuario: String): Observable<Usuario> {
+        return this.http.get<Usuario>(environment.host + `/userid/${usuario}`)
+    }
+
     public getUsuario (): Usuario {
         let usuario = new Usuario()
         usuario.nome = "Leandro"

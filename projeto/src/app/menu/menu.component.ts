@@ -18,11 +18,6 @@ export class MenuComponent implements OnInit {
                 routerLink: 'home'
             },
             {
-                label: 'Estados',
-                icon: 'pi pi-fw pi-map-marker',
-                routerLink: 'estados'
-            },
-            {
                 label: 'Usuário',
                 icon: 'pi pi-fw pi-user',
                 routerLink: 'usuario'

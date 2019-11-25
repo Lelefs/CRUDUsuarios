@@ -20,5 +20,6 @@
 </div>
 <div class="divBtnsVoltarSalvar">
     <button pButton label="Voltar" routerLink="/usuario"></button>
-    <button pButton (click)="salvar()" label="Salvar" [disabled]="usuario.nome === '' || usuario.sobrenome === '' || usuario.email === ''"></button>
+    <button *ngIf="id" pButton (click)="editar()" class="btnDesabilitado" label="Editar" [disabled]="usuario.nome === '' || usuario.sobrenome === '' || usuario.email === ''"></button>
+    <button *ngIf="!id" pButton (click)="salvar()" class="btnDesabilitado" label="Salvar" [disabled]="usuario.nome === '' || usuario.sobrenome === '' || usuario.email === ''"></button>
 </div>

@@ -47,4 +47,17 @@ export class UsuarioComponent implements OnInit {
 
     }
 
+    public editar(usuario) {
+console.log(usuario)
+       /*  this.usuarioService.editar(usuario.email).subscribe(
+            response => {
+                this.listaUsuarios()
+            },
+            error => {
+                alert('Não foi possível deletar este usuário.')
+            }
+        ) */
+
+    }
+
 }

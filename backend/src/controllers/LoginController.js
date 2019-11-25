@@ -15,6 +15,14 @@ module.exports = {
         return res.json(user);
     },
 
+    async showId(req, res) {
+        const { _id } = req.params;
+
+        const user = await User.findOne({ _id })
+
+        return res.json(user);
+    },
+
     async index(req, res) {
         const { email, nome, sobrenome, tipo } = req.query;
         let params = {};
@@ -51,15 +59,15 @@ module.exports = {
     },
 
     async update(req, res) {
-        const { email, nome, sobrenome, tipo } = req.query;
+        const { _id, nome, sobrenome, email, tipo } = req.body;
 
         let params = {};
-        email ? params.email = email : null;
         nome ? params.nome = nome : null;
         sobrenome ? params.sobrenome = sobrenome : null;
+        email ? params.email = email : null;
         tipo ? params.tipo = tipo : null;
 
-        let user = await User.updateOne({ email }, params )
+        let user = await User.updateOne({ _id }, params )
 
         return res.json('Usuário editado com sucesso');
     }

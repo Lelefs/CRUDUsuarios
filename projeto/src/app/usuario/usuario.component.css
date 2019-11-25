@@ -5,3 +5,7 @@
     grid-gap: 15px;
     margin: 15px 0 0 7px;
 }
+
+.btnDesabilitado:disabled {
+    cursor: initial !important;
+}
